@@ -1,5 +1,5 @@
 /*global module:false, require:false*/
-var md = require('matchdep');
+//var md = require('matchdep');
 
 module.exports = function(grunt) {
 
@@ -8,7 +8,8 @@ module.exports = function(grunt) {
 	var gruntfile = 'Gruntfile.js';
 	var sources = ['src/<%= pkg.name %>.js'];
 	
-	md.filter('grunt-*').forEach(grunt.loadNpmTasks);
+        //md.filter('grunt-*').forEach(grunt.loadNpmTasks);
+        require('load-grunt-tasks')(grunt);
 	
 	// Project configuration.
 	grunt.initConfig({
